@@ -71,6 +71,6 @@ app.use('/v1', postLoginRoute);
 
 app.use('/v1', postLogoutRoute);
 
-app.listen(4000, () => {
-    console.log("Listening to localhost PORT 4000...");
+app.listen(6000, () => {
+    console.log("Listening to localhost PORT 6000...");
 })
