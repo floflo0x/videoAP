@@ -11,12 +11,15 @@
     "request": "^2.88.2",
     "request-promise-any": "^1.0.9"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "name": "prac2Sh",
   "version": "1.0.0",
   "main": "index.js",
-  // "devDependencies": {
-  //   "nodemon": "^3.0.1"
-  // },
+  "devDependencies": {
+     "nodemon": "^3.0.1"
+  },
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,6 +30,6 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/floflo0x/admin_panel1.git"
+    "url": "git+https://github.com/floflo0x/videoAP.git"
   }
 }
