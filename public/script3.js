@@ -493,7 +493,7 @@
             redirect: 'follow'
           };
 
-          fetch(`${proxyUrl}https://s1.oneupload.to/upload/04`, requestOptions)
+          fetch(`https://s1.oneupload.to/upload/04`, requestOptions)
             .then(response => response.json())
             .then(async (result) => {
               // console.log(result);
@@ -513,7 +513,7 @@
                   redirect: 'follow'
                 };
 
-                fetch(`${proxyUrl}${baseUri}api/file/direct_link?key=617ujm5brrei3rqdhdm&file_code=${filecode}`, requestOptions1)
+                fetch(`${baseUri}api/file/direct_link?key=617ujm5brrei3rqdhdm&file_code=${filecode}`, requestOptions1)
                   .then(response => response.json())
                   .then(async (result) => {
                     // console.log(result);
@@ -933,7 +933,7 @@
                 redirect: 'follow'
               };
 
-              fetch(`${proxyUrl}https://s1.oneupload.to/upload/04`, requestOptions)
+              fetch(`https://s1.oneupload.to/upload/04`, requestOptions)
                 .then(response => response.json())
                 .then(async (result) => {
                   console.log(result);
@@ -953,7 +953,7 @@
                       redirect: 'follow'
                     };
 
-                    fetch(`${proxyUrl}${baseUri}api/file/direct_link?key=617ujm5brrei3rqdhdm&file_code=${filecode}`, requestOptions1)
+                    fetch(`${baseUri}api/file/direct_link?key=617ujm5brrei3rqdhdm&file_code=${filecode}`, requestOptions1)
                       .then(response => response.json())
                       .then(async (result) => {
                         // console.log(result);
