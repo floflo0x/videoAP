@@ -1,0 +1,94 @@
+<%- include("./includes/head.ejs"); %>
+
+<body>
+  <link rel="stylesheet" type="text/css" href="/style2.css">
+
+  <section>
+    <div class="container-fluid mb-2">
+      <div
+        class="row p-3"
+      >
+        <div class="col-12 col-md-12 text-center" style="display: flex; align-items: end; justify-content: center">
+          <h4>Sign Up</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <% if(errorMessage) { %>
+            <div class="alert alert-danger" role="alert"><%= errorMessage %></div>
+          <% } %>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <form action="/v1/register" method="POST" novalidate>
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Telegram username</label>
+              <input 
+                type="text" 
+                name="name" 
+                class="form-control" 
+                id="exampleInputName" 
+                placeholder="Please enter your username" 
+                value="<%= oldInput.name %>"
+              >
+            </div> 
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input 
+                type="email" 
+                name="email" 
+                class="form-control" 
+                id="exampleInputEmail1" 
+                aria-describedby="emailHelp" 
+                placeholder="Please enter your email"
+                value="<%= oldInput.email %>"
+              >
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input 
+                type="password" 
+                name="password" 
+                class="form-control" 
+                id="exampleInputPassword1" 
+                placeholder="Please enter your password"
+              >
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputCPassword1" class="form-label">Password confirmation</label>
+              <input type="password" name="cpassword" class="form-control" id="exampleInputCPassword1" placeholder="Please enter your password confirmation">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPhNo" class="form-label">Phone</label>
+              <input type="tel" name="phone" class="form-control" id="exampleInputPhNo" placeholder="Please enter your phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+            </div>
+
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">I agree to terms & Policy.</label>
+            </div>
+
+            <div class="mb-3 text-center">
+              <button type="submit" class="btn text-light bg-dark w-50 border-0 p-3 bg-primary bg-gradient" style="border-radius: 25px; box-shadow: 5px 5px 10px 2px grey">
+                  SIGN UP
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <%- include("./includes/end.ejs"); %>
+</body>
