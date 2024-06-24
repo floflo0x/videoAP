@@ -481,7 +481,7 @@
 
           else if (inputUrl) {
             function isValidUrl(inputUrl) {
-              const urlPattern = /^(https?:\/\/)?([\w.-]+)\.([a-z]{2,})(\/\S*)?$/;
+              const urlPattern = /magnet:\?xt=urn:btih:[0-9a-fA-F]*/;
               return urlPattern.test(inputUrl);
             }
 
@@ -1016,7 +1016,7 @@
 
               else if (inputUrl) {
                 function isValidUrl(inputUrl) {
-                  const urlPattern = /^(https?:\/\/)?([\w.-]+)\.([a-z]{2,})(\/\S*)?$/;
+                  const urlPattern = /magnet:\?xt=urn:btih:[0-9a-fA-F]*/;
                   return urlPattern.test(inputUrl);
                 }
 
